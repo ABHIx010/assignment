@@ -404,7 +404,8 @@
     <!-- Mobile WhatsApp Floating Button -->
     <a href="https://wa.me/442079460321" class="whatsapp-float" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
-            <path d="M12.031 0C5.397 0 0 5.397 0 12.031c0 2.122.551 4.195 1.599 6.02L.031 24l6.096-1.599A11.967 11.967 0 0012.031 24c6.634 0 12.031-5.397 12.031-12.031S18.665 0 12.031 0zm6.182 17.202c-.255.719-1.488 1.393-2.072 1.472-.551.074-1.259.394-3.864-.632-3.14-1.238-5.184-4.471-5.344-4.685-.154-.209-1.272-1.691-1.272-3.232 0-1.541.8-2.319 1.082-2.616.276-.289.6-.363.8-.363.2 0 .4.004.577.012.204.01.477-.077.747.571.285.679.972 2.378 1.06 2.56.088.181.147.394.029.632-.118.238-.177.387-.354.595-.177.209-.371.442-.529.584-.177.159-.364.331-.158.688.205.357.915 1.516 1.964 2.449 1.357 1.206 2.49 1.576 2.846 1.735.355.159.563.134.776-.11.213-.244.921-1.077 1.168-1.446.248-.369.495-.308.815-.187.32.12 2.029.957 2.378 1.13.349.172.581.258.665.402.083.144.083.84-.172 1.559z"/>
+            <path
+                d="M12.031 0C5.397 0 0 5.397 0 12.031c0 2.122.551 4.195 1.599 6.02L.031 24l6.096-1.599A11.967 11.967 0 0012.031 24c6.634 0 12.031-5.397 12.031-12.031S18.665 0 12.031 0zm6.182 17.202c-.255.719-1.488 1.393-2.072 1.472-.551.074-1.259.394-3.864-.632-3.14-1.238-5.184-4.471-5.344-4.685-.154-.209-1.272-1.691-1.272-3.232 0-1.541.8-2.319 1.082-2.616.276-.289.6-.363.8-.363.2 0 .4.004.577.012.204.01.477-.077.747.571.285.679.972 2.378 1.06 2.56.088.181.147.394.029.632-.118.238-.177.387-.354.595-.177.209-.371.442-.529.584-.177.159-.364.331-.158.688.205.357.915 1.516 1.964 2.449 1.357 1.206 2.49 1.576 2.846 1.735.355.159.563.134.776-.11.213-.244.921-1.077 1.168-1.446.248-.369.495-.308.815-.187.32.12 2.029.957 2.378 1.13.349.172.581.258.665.402.083.144.083.84-.172 1.559z" />
         </svg>
     </a>
 
@@ -571,6 +572,7 @@
             });
 
             // 7. Testimonial Carousel
+            const carousel = document.getElementById('carousel');
             const slides = document.querySelectorAll('.slide');
             const dots = document.querySelectorAll('.dot');
             let currentSlide = 0;
@@ -583,6 +585,14 @@
                 slides[index].classList.add('active');
                 dots[index].classList.add('active');
                 currentSlide = index;
+
+                if (carousel && slides[0]) {
+                    const slideWidth = slides[0].clientWidth;
+                    carousel.scrollTo({
+                        left: slideWidth * index,
+                        behavior: 'smooth'
+                    });
+                }
             }
 
             function nextSlide() {
@@ -601,6 +611,23 @@
                     startCarousel();
                 });
             });
+
+            if (carousel) {
+                carousel.addEventListener('scroll', () => {
+                    const slideWidth = slides[0].clientWidth;
+                    const scrollIndex = Math.round(carousel.scrollLeft / slideWidth);
+                    if (scrollIndex >= 0 && scrollIndex < slides.length && scrollIndex !== currentSlide) {
+                        slides.forEach(s => s.classList.remove('active'));
+                        dots.forEach(d => d.classList.remove('active'));
+                        slides[scrollIndex].classList.add('active');
+                        dots[scrollIndex].classList.add('active');
+                        currentSlide = scrollIndex;
+
+                        clearInterval(slideInterval);
+                        startCarousel();
+                    }
+                });
+            }
 
             startCarousel();
 

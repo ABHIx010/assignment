@@ -23,6 +23,7 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         body {
@@ -752,26 +753,32 @@
         }
 
         .carousel {
-            position: relative;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+            gap: 20px;
+            padding-bottom: 20px;
             max-width: 800px;
             margin: 0 auto;
-            min-height: 300px;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
         }
 
         .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            opacity: 0;
-            transition: opacity 0.8s ease;
-            pointer-events: none;
+            flex: 0 0 100%;
+            scroll-snap-align: center;
+            opacity: 0.3;
+            transition: opacity 0.4s ease;
+            position: relative;
         }
 
         .slide.active {
             opacity: 1;
-            pointer-events: auto;
-            position: relative;
         }
 
         .quote-icon {
@@ -1241,8 +1248,8 @@
         .whatsapp-float {
             display: none;
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 40px;
+            right: 30px;
             width: 60px;
             height: 60px;
             background-color: #25D366;
