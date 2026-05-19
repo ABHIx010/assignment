@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Palazzo | Fine Italian Dining</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cormorant+SC:wght@300;400;500;600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="no-scroll">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-title">The Palazzo</div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-brand">
+            <span>THE PALAZZO</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <a href="#contact" class="btn btn-outline nav-btn">Reserve a Table</a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#menu" class="mobile-link">Menu</a>
+        <a href="#testimonials" class="mobile-link">Testimonials</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg" id="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="small-caps hero-subtitle reveal">
+                <span class="gold-text">◆</span> FINE DINING · EST. 1994 <span class="gold-text">◆</span>
+            </div>
+
+            <div class="hero-title-wrapper">
+                <h1 class="hero-title" id="hero-title">THE PALAZZO</h1>
+            </div>
+
+            <div class="gold-line reveal"></div>
+
+            <div class="script-font hero-tagline reveal">
+                Where Every Meal Becomes a Memory
+            </div>
+
+            <div class="hero-btns reveal">
+                <a href="#contact" class="btn btn-outline">Reserve a Table</a>
+                <a href="#menu" class="btn btn-filled">View Our Menu</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding" id="about">
+        <div class="container about-grid">
+            <div class="about-text reveal-left">
+                <div class="small-caps gold-text">Our Story</div>
+                <h2 class="section-title">A Legacy of Italian Craftsmanship</h2>
+                <div class="gold-line" style="margin-left: 0;"></div>
+
+                <p>Since 1994, The Palazzo has stood as a beacon of culinary excellence in the heart of London. Founded
+                    by Chef Lorenzo Moretti, our establishment was born from a singular vision: to transport the
+                    authentic, aristocratic flavors of Northern Italy to discerning diners.</p>
+                <br>
+                <p>Every dish we serve is a testament to tradition, crafted with ingredients sourced directly from
+                    small-scale artisans across Piedmont, Lombardy, and Emilia-Romagna. We believe that fine dining is
+                    not merely about consumption, but about participating in a timeless ritual of elegance.</p>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">25+</span>
+                        <span class="small-caps">Years</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">3</span>
+                        <span class="small-caps">Awards</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">2</span>
+                        <span class="small-caps">Michelin Stars</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image reveal-right delay-1">
+                <div class="arch-frame">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80"
+                        alt="Chef preparing fine cuisine" loading="lazy">
+                </div>
+                <div class="badge">
+                    <div class="badge-inner">EST.<br>1994</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section-padding menu-section" id="menu">
+        <div class="container">
+            <div class="menu-header reveal">
+                <div class="small-caps gold-text">Our Menu</div>
+                <h2 class="section-title">A Symphony of Northern Italian Flavours</h2>
+
+                <div class="menu-tabs">
+                    <button class="menu-tab active" data-category="primi">Primi Piatti</button>
+                    <button class="menu-tab" data-category="secondi">Secondi</button>
+                    <button class="menu-tab" data-category="dolci">Dolci</button>
+                    <button class="menu-tab" data-category="vini">Vini</button>
+                </div>
+            </div>
+
+            <div class="menu-grid reveal delay-1" id="menu-grid">
+                <!-- Menu Items generated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding" id="testimonials">
+        <div class="container testimonials reveal">
+            <h2 class="section-title">What Our Guests Say</h2>
+
+            <div class="carousel" id="carousel">
+                <!-- Slides will be controlled by JS -->
+                <div class="slide active">
+                    <div class="quote-icon">❝</div>
+                    <div class="review-text">"An unparalleled dining experience. The truffle risotto transported me
+                        straight to Piedmont. The service is impeccable, striking the perfect balance between attentive
+                        and unobtrusive."</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="reviewer">— Alessandro Ricci, London</div>
+                    <div class="small-caps gold-text" style="font-size: 0.6rem; margin-top: 5px;">Verified Diner</div>
+                </div>
+
+                <div class="slide">
+                    <div class="quote-icon">❝</div>
+                    <div class="review-text">"From the moment you walk through the doors, you are treated like royalty.
+                        The wine pairing was masterfully curated, and the atmosphere is simply magical. A true London
+                        gem."</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="reviewer">— Eleanor Vance, New York</div>
+                    <div class="small-caps gold-text" style="font-size: 0.6rem; margin-top: 5px;">Verified Diner</div>
+                </div>
+
+                <div class="slide">
+                    <div class="quote-icon">❝</div>
+                    <div class="review-text">"We celebrated our anniversary here, and they made it unforgettable. The
+                        osso buco is a revelation. I cannot recommend The Palazzo highly enough for special occasions."
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <div class="reviewer">— James & Claire Thornton</div>
+                    <div class="small-caps gold-text" style="font-size: 0.6rem; margin-top: 5px;">Verified Diner</div>
+                </div>
+            </div>
+
+            <div class="carousel-nav" id="carousel-nav">
+                <div class="dot active" data-slide="0"></div>
+                <div class="dot" data-slide="1"></div>
+                <div class="dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Review Feature Section -->
+    <section class="section-padding qr-section">
+        <div class="container reveal">
+            <div class="qr-card">
+                <div class="small-caps gold-text">Share Your Experience</div>
+                <h3 class="section-title" style="font-size: 2.5rem; margin-bottom: 10px;">Loved Your Evening?</h3>
+                <p>Scan below to leave us a review on Google</p>
+
+                <div class="qr-box">
+                    <!-- Generic placeholder QR code -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://google.com&color=0a1f12&bgcolor=ffffff"
+                        alt="QR Code for Reviews" loading="lazy">
+                    <div class="qr-glow"></div>
+                </div>
+
+                <a href="#" class="qr-link">Or tap to open Google Reviews &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loyalty / Coupon Section -->
+    <section class="coupon-banner section-padding">
+        <div class="container reveal">
+            <div class="coupon-content">
+                <div class="small-caps gold-text"> Exclusive For Our Guests </div>
+                <h3 class="coupon-title">Return Within 30 Days & Enjoy<br>15% OFF Your Next Visit</h3>
+
+                <p>Show this to your server or use code online:</p>
+
+                <div class="coupon-code-box">
+                    <span class="coupon-code">PALAZZO15</span>
+                </div>
+
+                <div class="coupon-btns">
+                    <a href="#contact" class="btn btn-filled">Claim Your Offer</a>
+                    <a href="https://wa.me/442079460321" target="_blank" class="btn btn-outline"
+                        style="border-color: #25D366; color: #25D366;">WhatsApp to Redeem</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-info reveal-left">
+                <div class="small-caps gold-text">Get In Touch</div>
+                <h2 class="section-title">Reserve Your Table</h2>
+                <div class="gold-line" style="margin-left: 0;"></div>
+                <p>We invite you to experience the finest Northern Italian cuisine. Due to limited seating, reservations
+                    are highly recommended.</p>
+
+                <ul>
+                    <li>
+                        <div>
+                            <strong>Location</strong><br>
+                            14 Via Castello, Mayfair, London W1K 2AB
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Phone</strong><br>
+                            +44 20 7946 0321
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Email</strong><br>
+                            reservations@thepalazzo.co.uk
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Hours</strong><br>
+                            Mon–Sat: 12pm–11pm<br>
+                            Sun: 12pm–9pm
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form-container reveal-right delay-1">
+                <form id="reservation-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Full Name *" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Phone Number *" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" class="form-control" required style="color: var(--text-muted);">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" style="color: var(--text-muted);" required>
+                                <option value="" disabled selected>Time *</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" style="color: var(--text-muted);" required>
+                            <option value="" disabled selected>Number of Guests *</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5+ People</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control"
+                            placeholder="Special Requests (e.g. allergies, anniversaries)"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-filled" style="width: 100%;">Request Reservation</button>
+                </form>
+                <div id="form-success">Your reservation request has been received. We will contact you shortly to
+                    confirm.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location / Map Section -->
+    <section class="map-section">
+        <iframe class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19864.623537583488!2d-0.1583005510651913!3d51.51139413697159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d49a4b7efb%3A0xc68297b4dd30f57c!2sMayfair%2C%20London%2C%20UK!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="map-card reveal delay-1">
+            <h4 class="map-card-title">The Palazzo</h4>
+            <p>14 Via Castello, Mayfair,</p>
+            <p>London W1K 2AB</sp>
+                <a href="#" class="btn btn-outline">Get Directions</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">THE PALAZZO</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">Where Every Meal Becomes a Memory.</p>
+                    <p style="color: var(--text-secondary);">Fine Dining in the heart of London since 1994.</p>
+
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-icon" aria-label="TripAdvisor">TA</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="footer-title">Navigation</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Reservations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-title">Opening Hours</h5>
+                    <ul class="footer-links">
+                        <li><span style="color: var(--text-secondary);">Monday – Friday</span><br>12:00 PM – 11:00 PM
+                        </li>
+                        <li><span style="color: var(--text-secondary);">Saturday</span><br>12:00 PM – 11:00 PM</li>
+                        <li><span style="color: var(--text-secondary);">Sunday</span><br>12:00 PM – 9:00 PM</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-title">Contact</h5>
+                    <ul class="footer-links">
+                        <li>14 Via Castello, Mayfair<br>London W1K 2AB</li>
+                        <li>+44 20 7946 0321</li>
+                        <li>reservations@thepalazzo.co.uk</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2025 The Palazzo. All Rights Reserved.</div>
+                <div>
+                    <a href="#" style="color: var(--text-muted); margin-right: 20px;">Privacy Policy</a>
+                    <a href="#" style="color: var(--text-muted);">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile WhatsApp Floating Button -->
+    <a href="https://wa.me/442079460321" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+            <path d="M12.031 0C5.397 0 0 5.397 0 12.031c0 2.122.551 4.195 1.599 6.02L.031 24l6.096-1.599A11.967 11.967 0 0012.031 24c6.634 0 12.031-5.397 12.031-12.031S18.665 0 12.031 0zm6.182 17.202c-.255.719-1.488 1.393-2.072 1.472-.551.074-1.259.394-3.864-.632-3.14-1.238-5.184-4.471-5.344-4.685-.154-.209-1.272-1.691-1.272-3.232 0-1.541.8-2.319 1.082-2.616.276-.289.6-.363.8-.363.2 0 .4.004.577.012.204.01.477-.077.747.571.285.679.972 2.378 1.06 2.56.088.181.147.394.029.632-.118.238-.177.387-.354.595-.177.209-.371.442-.529.584-.177.159-.364.331-.158.688.205.357.915 1.516 1.964 2.449 1.357 1.206 2.49 1.576 2.846 1.735.355.159.563.134.776-.11.213-.244.921-1.077 1.168-1.446.248-.369.495-.308.815-.187.32.12 2.029.957 2.378 1.13.349.172.581.258.665.402.083.144.083.84-.172 1.559z"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Preloader & Hero Animation
+            const preloader = document.getElementById('preloader');
+            const heroTitleWrapper = document.getElementById('hero-title');
+            const titleText = heroTitleWrapper.innerText;
+
+            // Split hero text for stagger animation
+            heroTitleWrapper.innerHTML = '';
+            [...titleText].forEach((char, i) => {
+                const span = document.createElement('span');
+                span.innerText = char === ' ' ? '\u00A0' : char;
+                span.style.opacity = '0';
+                span.style.display = 'inline-block';
+                span.style.animation = `fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards ${1.3 + (i * 0.05)}s`;
+                heroTitleWrapper.appendChild(span);
+            });
+
+            setTimeout(() => {
+                preloader.classList.add('slide-up');
+                document.body.classList.remove('no-scroll');
+            }, 2500);
+
+            // 2. Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 80) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Mobile Menu Toggle
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            hamburger.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+
+                // Toggle hamburger icon animation
+                const spans = hamburger.querySelectorAll('span');
+                if (mobileMenu.classList.contains('active')) {
+                    spans[0].style.transform = 'translateY(7px) rotate(45deg)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    const spans = hamburger.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                });
+            });
+
+            // 4. Scroll Animations (Intersection Observer)
+            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // 5. Parallax Hero Background
+            const heroBg = document.getElementById('hero-bg');
+            window.addEventListener('scroll', () => {
+                requestAnimationFrame(() => {
+                    const scrollPos = window.scrollY;
+                    if (scrollPos < window.innerHeight) {
+                        heroBg.style.transform = `translate3d(0, ${scrollPos * 0.5}px, 0)`;
+                    }
+                });
+            });
+
+            // 6. Menu Data & Tabs
+            const menuData = {
+                primi: [
+                    { name: 'Tagliatelle al Tartufo', desc: 'Hand-rolled pasta with black winter truffle and Parmigiano-Reggiano', price: '£ 38', special: true, img: 'https://images.unsplash.com/photo-1551183053-bf91798d792c?auto=format&fit=crop&w=600&q=80' },
+                    { name: 'Risotto ai Funghi', desc: 'Carnaroli rice, wild porcini mushrooms, thyme, white wine', price: '£ 32', special: false, img: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=600&q=80' },
+                    { name: 'Ravioli di Zucca', desc: 'Roasted pumpkin filled pasta, sage brown butter, amaretti dust', price: '£ 28', special: false, img: 'https://images.unsplash.com/photo-1551183053-bf91798d792c?auto=format&fit=crop&w=600&q=80' } // reused pasta image for example
+                ],
+                secondi: [
+                    { name: 'Osso Buco alla Milanese', desc: 'Braised veal shank, saffron risotto, gremolata', price: '£ 45', special: true, img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80' },
+                    { name: 'Branzino al Forno', desc: 'Whole roasted sea bass, lemon, capers, roasted potatoes', price: '£ 42', special: false, img: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=600&q=80' }
+                ],
+                dolci: [
+                    { name: 'Tiramisu Classico', desc: 'Espresso-soaked ladyfingers, mascarpone cream, cocoa', price: '£ 14', special: true, img: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80' },
+                    { name: 'Panna Cotta', desc: 'Vanilla bean panna cotta, mixed berry compote', price: '£ 12', special: false, img: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80' }
+                ],
+                vini: [
+                    { name: 'Barolo DOCG', desc: 'Piedmont, 2015. Complex, robust, notes of cherry and leather', price: '£ 120', special: true, img: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80' },
+                    { name: 'Chianti Classico', desc: 'Tuscany, 2018. Sangiovese blend, medium body', price: '£ 65', special: false, img: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80' }
+                ]
+            };
+
+            const menuGrid = document.getElementById('menu-grid');
+            const menuTabs = document.querySelectorAll('.menu-tab');
+
+            function renderMenu(category) {
+                menuGrid.innerHTML = '';
+                menuGrid.style.opacity = '0';
+
+                setTimeout(() => {
+                    const items = menuData[category];
+                    items.forEach((item, index) => {
+                        const card = document.createElement('div');
+                        card.className = `menu-card`;
+                        card.style.animation = `fadeUp 0.6s ease forwards ${index * 0.1}s`;
+                        card.style.opacity = '0';
+
+                        let specialBadge = item.special ? `<div class="chef-special">Chef's Special</div>` : '<div></div>';
+
+                        card.innerHTML = `
+                            <div class="arch-frame menu-card-img">
+                                <img src="${item.img}" alt="${item.name}" loading="lazy">
+                            </div>
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">◆ ${item.name}</h3>
+                            </div>
+                            <p class="menu-item-desc">${item.desc}</p>
+                            <div class="menu-item-footer">
+                                ${specialBadge}
+                                <span class="menu-item-price">${item.price}</span>
+                            </div>
+                        `;
+                        menuGrid.appendChild(card);
+                    });
+                    menuGrid.style.opacity = '1';
+                }, 300);
+            }
+
+            // Init menu
+            renderMenu('primi');
+
+            menuTabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    menuTabs.forEach(t => t.classList.remove('active'));
+                    e.target.classList.add('active');
+                    renderMenu(e.target.getAttribute('data-category'));
+                });
+            });
+
+            // 7. Testimonial Carousel
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                slides.forEach(s => s.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                let next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+
+            function startCarousel() {
+                slideInterval = setInterval(nextSlide, 5000); // 5s per slide
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    showSlide(index);
+                    startCarousel();
+                });
+            });
+
+            startCarousel();
+
+            // 8. Form Submission
+            const form = document.getElementById('reservation-form');
+            const formSuccess = document.getElementById('form-success');
+
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    form.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
